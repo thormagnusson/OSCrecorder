@@ -1,0 +1,26 @@
+#N canvas 754 64 655 567 10;
+#X obj 140 231 sendOSC;
+#X msg 27 91 connect localhost 57120;
+#X msg 281 140 send /test 1 2 3;
+#X msg 282 105 send /integer \$1;
+#X floatatom 282 73 5 0 0 0 - - -;
+#X msg 280 172 send /test "hoho";
+#X obj 427 315 dumpOSC 7110;
+#X obj 262 386 print;
+#X obj 427 351 OSCroute /integer;
+#X floatatom 427 384 5 0 0 0 - - -;
+#X obj 430 418 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1200 1;
+#X obj 285 41 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1200 1;
+#X text 26 68 connect to SuperCollider;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 11 0 4 0;
